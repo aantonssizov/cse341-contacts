@@ -16,7 +16,7 @@ router.get("/get/:id", async (req, res, next) => {
   const contact = await collection.findOne({
     _id: new ObjectId(req.params.id),
   });
-  if (!conctact) res.send("Not Found.").status(404);
+  if (!contact) res.send("Not Found.").status(404);
   else res.json(contact);
 });
 
