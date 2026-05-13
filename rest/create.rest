@@ -1,0 +1,10 @@
+POST https://cse341-contacts-moso.onrender.com/contacts/
+Content-Type: application/json
+
+{
+    "firstName": "Test",
+    "lastName": "Test",
+    "email": "test@test.com",
+    "favoriteColor": "Blue",
+    "birthday": "August 1st, 2004"
+}

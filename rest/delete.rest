@@ -1,0 +1,2 @@
+## Please get the id after creating a new test contact and insert it here.
+DELETE https://cse341-contacts-moso.onrender.com/contacts/6a047f00f2eef2e9c532bc36
