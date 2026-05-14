@@ -2,7 +2,11 @@ const swaggerAutogen = require("swagger-autogen")();
 
 const doc = {
   info: { title: "Contacts API", description: "Api for Contacts application" },
-  host: "https://cse341-contacts-moso.onrender.com",
+  servers: [
+    {
+      url: "https://cse341-contacts-moso.onrender.com",
+    },
+  ],
 };
 
 const outputFile = "./swagger.json";

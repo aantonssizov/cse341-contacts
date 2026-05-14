@@ -5,7 +5,12 @@
     "description": "Api for Contacts application",
     "version": "1.0.0"
   },
-  "host": "https://cse341-contacts-moso.onrender.com",
+  "host": "localhost:3000",
+  "servers": [
+    {
+      "url": "https://cse341-contacts-moso.onrender.com"
+    }
+  ],
   "basePath": "/",
   "schemes": [
     "http"
