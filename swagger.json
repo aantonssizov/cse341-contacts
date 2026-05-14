@@ -28,27 +28,11 @@
           }
         },
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "firstName": {
-                    "example": "any"
-                  },
-                  "lastName": {
-                    "example": "any"
-                  },
-                  "email": {
-                    "example": "any"
-                  },
-                  "favoriteColor": {
-                    "example": "any"
-                  },
-                  "birthday": {
-                    "example": "any"
-                  }
-                }
+                "$ref": "#/components/schemas/contactCreate"
               }
             }
           }
@@ -90,6 +74,16 @@
           "200": {
             "description": "OK"
           }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/contactUpdate"
+              }
+            }
+          }
         }
       },
       "delete": {
@@ -109,6 +103,67 @@
             "description": "OK"
           }
         }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "contactUpdate": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "example": "any"
+          },
+          "lastName": {
+            "type": "string",
+            "example": "any"
+          },
+          "email": {
+            "type": "string",
+            "example": "any"
+          },
+          "favoriteColor": {
+            "type": "string",
+            "example": "any"
+          },
+          "birthday": {
+            "type": "string",
+            "example": "any"
+          }
+        }
+      },
+      "contactCreate": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "example": "any"
+          },
+          "lastName": {
+            "type": "string",
+            "example": "any"
+          },
+          "email": {
+            "type": "string",
+            "example": "any"
+          },
+          "favoriteColor": {
+            "type": "string",
+            "example": "any"
+          },
+          "birthday": {
+            "type": "string",
+            "example": "any"
+          }
+        },
+        "required": [
+          "firstName",
+          "lastName",
+          "email",
+          "favoriteColor",
+          "birthday"
+        ]
       }
     }
   }

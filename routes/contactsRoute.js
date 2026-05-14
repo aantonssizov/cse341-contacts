@@ -21,6 +21,18 @@ router.get("/:id", async (req, res, next) => {
 });
 
 router.post("/", async (req, res, next) => {
+  /*  #swagger.requestBody = {
+            required: true,
+            content: {
+                "application/json": {
+                    schema: {
+                        $ref: "#/components/schemas/contactCreate"
+                    }  
+                }
+            }
+        } 
+    */
+
   const contact = req.body;
   let errMsg = "";
 
@@ -44,6 +56,18 @@ router.post("/", async (req, res, next) => {
 });
 
 router.put("/:id", async (req, res, next) => {
+  /*  #swagger.requestBody = {
+            required: true,
+            content: {
+                "application/json": {
+                    schema: {
+                        $ref: "#/components/schemas/contactUpdate"
+                    }  
+                }
+            }
+        } 
+    */
+
   const _id = new ObjectId(req.params.id);
   const contact = req.body;
 
